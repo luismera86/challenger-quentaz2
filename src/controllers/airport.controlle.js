@@ -1,5 +1,3 @@
-
-
 const getAirports = async (req = request, res = response) => {
 	try {
 		const airports = await Airport.findAll()
@@ -72,9 +70,9 @@ const deleteAirport = async (req = request, res = response) => {
 }
 
 module.exports = {
-    getAirports,
-    postAirport,
-    addDataInDb,
-    putAirport,
-    deleteAirport
+	getAirports,
+	postAirport,
+	addDataInDb,
+	putAirport,
+	deleteAirport,
 }
