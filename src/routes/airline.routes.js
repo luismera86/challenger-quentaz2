@@ -6,6 +6,7 @@ const {
 	putAirline,
 	deleteAirline,
 } = require('../controllers/airline.controller')
+const { checkAirlineId } = require('../middlewares/checkId')
 
 const airlinesRoutes = Router()
 

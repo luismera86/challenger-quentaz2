@@ -1,5 +1,6 @@
 const { Router } = require('express')
 const { getAirports, postAirport, putAirport, deleteAirport, addDataInDb } = require('../controllers/airport.controlle')
+const { checkAirportId } = require('../middlewares/checkId')
 
 const airportRoutes = Router()
 
