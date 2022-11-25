@@ -1,3 +1,7 @@
+const airports = require('../data/airports.data')
+const Airport = require('../models/airport.model')
+const { request, response } = require('express')
+
 const getAirports = async (req = request, res = response) => {
 	try {
 		const airports = await Airport.findAll()

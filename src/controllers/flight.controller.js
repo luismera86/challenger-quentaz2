@@ -1,3 +1,7 @@
+const Flight = require('../models/flight.model')
+const flights = require('../data/flights.data')
+const { request, response } = require('express')
+
 const getFlights = async (req = request, res = response) => {
 	try {
 		const flights = await Flight.findAll()

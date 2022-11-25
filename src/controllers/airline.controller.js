@@ -1,5 +1,6 @@
-
-
+const Airline = require('../models/airline.model')
+const { request, response } = require('express')
+const airlines = require('../data/airlines.data')
 
 const getAirlines = async (req = request, res = response) => {
 	console.log('entra')
@@ -72,9 +73,9 @@ const deleteAirline = async (req = request, res = response) => {
 }
 
 module.exports = {
-    getAirlines,
-    postAirline,
-    addDataInDb,
-    putAirline,
-    deleteAirline
+	getAirlines,
+	postAirline,
+	addDataInDb,
+	putAirline,
+	deleteAirline,
 }
