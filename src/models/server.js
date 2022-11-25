@@ -1,17 +1,19 @@
 const express = require('express')
 const db = require('../config/db.config')
 const { PORT } = require('../config/server.config')
+const router = require('../routes')
 
 class Server {
 	constructor() {
 		this.app = express()
 		this.port = PORT
-		this.db = db
+        this.db = db
+        
 		
         this.listen()
 		this.dbConnection()
 		this.middlewares()
-		// this.router()
+		this.router()
 	}
 
 	listen() {
@@ -26,7 +28,7 @@ class Server {
 	}
 
 	router() {
-		// this.app.use('/api', router)
+		this.app.use('/api', router)
 	}
 
 	async dbConnection() {
