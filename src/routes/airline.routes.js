@@ -1,4 +1,11 @@
 const { Router } = require('express')
+const {
+	getAirlines,
+	postAirline,
+	addDataInDb,
+	putAirline,
+	deleteAirline,
+} = require('../controllers/airline.controller')
 
 const airlinesRoutes = Router()
 
